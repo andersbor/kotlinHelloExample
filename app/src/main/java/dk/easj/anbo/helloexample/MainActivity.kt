@@ -16,14 +16,14 @@ class MainActivity : AppCompatActivity() {
         val view: View = binding.root
         setContentView(view)
 
-        binding.buttonSayHello.setOnClickListener {
-            val inputField = binding.edittextName
+        binding.sayHelloButton.setOnClickListener {
+            val inputField = binding.nameEditText
             val name = inputField.text.toString().trim()
             if (name.isEmpty()) {
                 inputField.error = "No name"
                 return@setOnClickListener
             }
-            binding.textviewSayHello.text = "Hello $name"
+            binding.sayHelloButton.text = "Hello $name"
         }
     }
 }
