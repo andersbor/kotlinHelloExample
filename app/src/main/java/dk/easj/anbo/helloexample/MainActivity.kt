@@ -23,7 +23,18 @@ class MainActivity : AppCompatActivity() {
                 inputField.error = "No name"
                 return@setOnClickListener
             }
-            binding.sayHelloButton.text = "Hello $name"
+            binding.sayHelloTextView.text = "Hello $name"
         }
+    }
+
+    fun sayGoodbye(view: View) {
+        // the View parameter is necessary, if it's missing this is not a proper event handler
+        val inputField = binding.nameEditText
+        val name = inputField.text.toString().trim()
+        if (name.isEmpty()) {
+            inputField.error = "No name"
+            return
+        }
+        binding.sayHelloTextView.text = "Goodbye $name"
     }
 }

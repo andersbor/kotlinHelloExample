@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Say Hello"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
 
     <EditText
         android:id="@+id/nameEditText"
@@ -24,6 +24,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Say Hello" />
+
+    <Button
+        android:onClick="sayGoodbye"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Say Goodbye" />
 
     <TextView
         android:id="@+id/sayHelloTextView"
